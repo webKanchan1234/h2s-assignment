@@ -5,15 +5,19 @@ A React-based Admin Dashboard showcasing products with features like sortable & 
 # Setup Steps
 1. Clone the repository
    https://github.com/webKanchan1234/h2s-assignment.git
+   
    cd h2s-assignment
 
-2. Install dependencies
+3. Install dependencies
+   
    npm install
 
-3. Run development server
+5. Run development server
+   
    npm run dev
    
-5. Build for production
+7. Build for production
+   
    npm run build
 
 # Feature Overview
@@ -21,37 +25,50 @@ A React-based Admin Dashboard showcasing products with features like sortable & 
 1. Admin Dashboard features:-
    
    Header with navigation, search bar, cart and profile image
+   
    Stats cards (Products, Revenue, Stock, Categories)
 
-2. Product Table
+3. Product Table
    Columns: ID, Image, Name, Category, Price, Stock, Status
+   
    Pagination (10/20/30/50 per page)
+   
    Sorting (ASC/DESC)
+   
    Drag-and-drop column reordering
+   
    Actions (Add to Cart, View, Edit, Delete)
 
-3. Cart
+5. Cart
 
    Add/Remove/Update quantity
+   
    Slide-out sidebar cart
+   
    Auto-calculated total price
+   
    In-memory state (using useReducer + Context)
 
-4. Modal
+7. Modal
    View product details in a clean, responsive modal
 
-5. Utilities
+8. Utilities
    Search index for faster lookups
+   
    Debounce hook for search input
 
 
 # Optimizations
   
   Lazy Loading images with loading="lazy"
+  
   useMemo for expensive computations (sorting, pagination, filtering)
+  
   useReducer + Context for scalable cart management
+  
   Drag & Drop with state persistence
-  Reusable Components (Modal, RowActions, ColumnHeader)
+  
+  Reusable Components (Modal)
 
 
 # Time Tracking (per feature)
@@ -81,33 +98,41 @@ A React-based Admin Dashboard showcasing products with features like sortable & 
 1. State Management for Cart
 
    Challenge:
+   
    Managing cart like add to cart, updates quantity, total price calculation is very difficult to manage, passing datas in nested component
 
    Solutions:
+   
    I implemented context api and useReducer for managing the data, no need to pass data in nested, with the help of context api, I can access in any component
 
-2. Drag & Drop Table Columns
+3. Drag & Drop Table Columns
 
    Challenge:
+   
    Smooth column reordering without losing state.
 
    Solution:
+   
    Used onDragStart, onDrop, and useState for column order persistence.
 
-3. Search Performance
+5. Search Performance
    
    Challenge:
+   
    Searching large datasets quickly.
    
    Solution:
+   
    Create useDebounce for avoiding the api call on every input field
 
-4. Reusable UI Components
+7. Reusable UI Components
   
    Challenge:
+   
    In many components have duplicate codes
 
    Solution:
+   
    Created reusable component like model to avoid duplicate code
 
 
